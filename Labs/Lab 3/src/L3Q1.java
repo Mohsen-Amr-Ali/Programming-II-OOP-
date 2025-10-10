@@ -20,11 +20,8 @@ class Person{
     public Person(String name, double salary, Boolean is_working, double monthly_expenses){
         this.name = name;
         this.salary = salary;
-        this.is_working = is_working;
+        setIs_working(is_working);
         this.monthly_expenses = monthly_expenses;
-
-        if(is_working && salary <=0)  this.salary = this.default_salary;
-        else if(!is_working && salary != 0) this.salary = 0;
     }
 
     //------- setters & getters --------//
