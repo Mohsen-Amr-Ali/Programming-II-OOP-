@@ -80,6 +80,7 @@ public class BankAccount {
 
         this.balance += amount;
         out.println("Deposited " + amount + "EGP successfully.\n");
+        out.println("New balance: " + this.balance + "EGP\n");
     }
 
     public void withdrawMoney(Scanner scanner) {
@@ -108,7 +109,8 @@ public class BankAccount {
         } while (!valid);
 
         this.balance -= amount;
-        out.println("Withdrawed " + amount + "EGP successfully.\n");
+        out.println("Withdrawed " + amount + "EGP successfully.");
+        out.println("New balance: " + this.balance + "EGP\n");
     }
 
     public void checkBalance(){

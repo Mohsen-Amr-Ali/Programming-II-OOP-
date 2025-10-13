@@ -53,6 +53,8 @@ class Person{
 
     public void setSalary(double salary) {
         this.salary = salary;
+        if(salary == 0 && this.is_working) this.salary = default_salary;
+        else if(salary > 0 && !this.is_working) this.salary = 0;
     }
 
     public void setIs_working(Boolean is_working) {
@@ -71,8 +73,13 @@ class Person{
 
     //---------- methods ---------//
     public void printPerson(){
-        out.printf("Person:\n-Name: %s\n-Salary: %.2f$\n-Is working: %B\n-Monthy expenses: %.2f$",
-                this.name, this.salary, this.is_working, this.monthly_expenses);
+        out.printf("Person:\n-Name: %s\n-Salary: %.2f$\n-Is working: %B\n-Monthy expenses: %.2f$\n Net income: %.2f$",
+                this.name, this.salary, this.is_working, this.monthly_expenses, this.netIncome());
+    }
+
+    public double netIncome(){
+        return this.salary -
+                this.monthly_expenses;
     }
 }
 
