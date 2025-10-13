@@ -6,7 +6,7 @@ class Person{
     private double salary;
     private Boolean is_working;
     private double monthly_expenses;
-    private double default_salary = 1000;
+    private static final double default_salary = 1000;
 
     //----- constructors ------//
 
@@ -67,9 +67,6 @@ class Person{
         this.monthly_expenses = monthly_expenses;
     }
 
-    public void setDefault_salary(double default_salary) {
-        this.default_salary = default_salary;
-    }
 
     //---------- methods ---------//
     public void printPerson(){
